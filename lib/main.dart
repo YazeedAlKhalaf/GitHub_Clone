@@ -272,199 +272,195 @@ class _BodyState extends State<Body> {
 
           // Main Panel
           Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  // Recent activity
-                  Container(
-                    height: 450,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          'Recent Activity',
-                          style: TextStyle(
-                            fontSize: 18,
-                          ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                // Recent activity
+                Container(
+                  height: 450,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Recent Activity',
+                        style: TextStyle(
+                          fontSize: 18,
                         ),
-                        CustomDivider(
-                          opacity: 1,
-                          width: 75,
-                        ),
-                        Container(
-                          height: 310,
-                          margin: const EdgeInsets.all(5),
-                          child: Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: ListView.builder(
-                                itemCount: 3,
-                                itemBuilder: (BuildContext context, int index) {
-                                  return Column(
-                                    children: [
-                                      ListTile(
-                                        leading: Icon(
-                                          Icons.error_outline,
-                                          color: Color(0xff28A745),
-                                        ),
-                                        title: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Row(
-                                              children: <Widget>[
-                                                Flexible(
-                                                  child: Text(
-                                                    'New Flutter CLI command to create a project for one platform',
-                                                    style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 15,
-                                                    ),
+                      ),
+                      CustomDivider(
+                        opacity: 1,
+                        width: 75,
+                      ),
+                      Container(
+                        height: 310,
+                        margin: const EdgeInsets.all(5),
+                        child: Card(
+                          child: Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: ListView.builder(
+                              itemCount: 3,
+                              itemBuilder: (BuildContext context, int index) {
+                                return Column(
+                                  children: [
+                                    ListTile(
+                                      leading: Icon(
+                                        Icons.error_outline,
+                                        color: Color(0xff28A745),
+                                      ),
+                                      title: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            children: <Widget>[
+                                              Flexible(
+                                                child: Text(
+                                                  'New Flutter CLI command to create a project for one platform',
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 15,
                                                   ),
                                                 ),
-                                                // SizedBox(width: 5),
-                                              ],
+                                              ),
+                                              // SizedBox(width: 5),
+                                            ],
+                                          ),
+                                          Chip(
+                                            backgroundColor:
+                                                Colors.yellowAccent,
+                                            padding: const EdgeInsets.all(0),
+                                            label: Text(
+                                              'severe: new feature',
+                                              style: TextStyle(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
-                                            Chip(
-                                              backgroundColor:
-                                                  Colors.yellowAccent,
-                                              padding: const EdgeInsets.all(0),
-                                              label: Text(
-                                                'severe: new feature',
+                                          ),
+                                        ],
+                                      ),
+                                      subtitle: Wrap(
+                                        children: <Widget>[
+                                          Text(
+                                            'flutter/flutter',
+                                            style: TextStyle(
+                                              color: accentColor,
+                                            ),
+                                          ),
+                                          SizedBox(width: 10),
+                                          Text(
+                                            '•',
+                                            style: TextStyle(
+                                              color: accentColor,
+                                            ),
+                                          ),
+                                          SizedBox(width: 10),
+                                          Text(
+                                            'You commented 4 days ago',
+                                            style: TextStyle(
+                                              color: accentColor,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      trailing: Wrap(
+                                        children: [
+                                          Wrap(
+                                            children: <Widget>[
+                                              Icon(
+                                                Icons.message,
+                                                color: accentColor,
+                                              ),
+                                              SizedBox(width: 5),
+                                              Text(
+                                                '5',
+                                                textAlign: TextAlign.center,
                                                 style: TextStyle(
-                                                  fontSize: 12,
+                                                  fontSize: 15,
+                                                  color: accentColor,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
-                                            ),
-                                          ],
-                                        ),
-                                        subtitle: Wrap(
-                                          children: <Widget>[
-                                            Text(
-                                              'flutter/flutter',
-                                              style: TextStyle(
-                                                color: accentColor,
-                                              ),
-                                            ),
-                                            SizedBox(width: 10),
-                                            Text(
-                                              '•',
-                                              style: TextStyle(
-                                                color: accentColor,
-                                              ),
-                                            ),
-                                            SizedBox(width: 10),
-                                            Text(
-                                              'You commented 4 days ago',
-                                              style: TextStyle(
-                                                color: accentColor,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        trailing: Wrap(
-                                          children: [
-                                            Wrap(
-                                              children: <Widget>[
-                                                Icon(
-                                                  Icons.message,
-                                                  color: accentColor,
-                                                ),
-                                                SizedBox(width: 5),
-                                                Text(
-                                                  '5',
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: accentColor,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
+                                            ],
+                                          ),
+                                        ],
                                       ),
-                                      if (index != 2)
-                                        Opacity(
-                                          opacity: 0.3,
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                              color: accentColor,
-                                              borderRadius:
-                                                  BorderRadius.circular(
-                                                500,
-                                              ),
-                                            ),
-                                            height: 2,
-                                            width: double.infinity,
-                                            margin: const EdgeInsets.symmetric(
-                                              horizontal: 5,
+                                    ),
+                                    if (index != 2)
+                                      Opacity(
+                                        opacity: 0.3,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            color: accentColor,
+                                            borderRadius: BorderRadius.circular(
+                                              500,
                                             ),
                                           ),
+                                          height: 2,
+                                          width: double.infinity,
+                                          margin: const EdgeInsets.symmetric(
+                                            horizontal: 5,
+                                          ),
                                         ),
-                                    ],
-                                  );
-                                },
-                              ),
+                                      ),
+                                  ],
+                                );
+                              },
                             ),
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
+                ),
 
-                  // All activity
-                  // Container(
-                  //   height: 450,
-                  //   child: Column(
-                  //     crossAxisAlignment: CrossAxisAlignment.start,
-                  //     children: <Widget>[
-                  //       Text(
-                  //         'All Activity',
-                  //         style: TextStyle(
-                  //           fontSize: 18,
-                  //         ),
-                  //       ),
-                  //       CustomDivider(
-                  //         opacity: 1,
-                  //         width: 75,
-                  //       ),
-                  //       Container(
-                  //         height: 310,
-                  //         margin: const EdgeInsets.all(5),
-                  //         child: Card(
-                  //           child: Padding(
-                  //             padding: const EdgeInsets.all(10),
-                  //             child: ListView.builder(
-                  //               itemCount: 1,
-                  //               itemBuilder: (BuildContext context, int index) {
-                  //                 return Column(
-                  //                   children: [
-                  //                     ListTile(
-                  //                       leading: CircleAvatar(),
-                  //                       title: Column(
-                  //                         crossAxisAlignment:
-                  //                             CrossAxisAlignment.start,
-                  //                         children: [],
-                  //                       ),
-                  //                     ),
-                  //                   ],
-                  //                 );
-                  //               },
-                  //             ),
-                  //           ),
-                  //         ),
-                  //       ),
-                  //     ],
-                  //   ),
-                  // ),
-                ],
-              ),
+                // All activity
+                // Container(
+                //   height: 450,
+                //   child: Column(
+                //     crossAxisAlignment: CrossAxisAlignment.start,
+                //     children: <Widget>[
+                //       Text(
+                //         'All Activity',
+                //         style: TextStyle(
+                //           fontSize: 18,
+                //         ),
+                //       ),
+                //       CustomDivider(
+                //         opacity: 1,
+                //         width: 75,
+                //       ),
+                //       Container(
+                //         height: 310,
+                //         margin: const EdgeInsets.all(5),
+                //         child: Card(
+                //           child: Padding(
+                //             padding: const EdgeInsets.all(10),
+                //             child: ListView.builder(
+                //               itemCount: 1,
+                //               itemBuilder: (BuildContext context, int index) {
+                //                 return Column(
+                //                   children: [
+                //                     ListTile(
+                //                       leading: CircleAvatar(),
+                //                       title: Column(
+                //                         crossAxisAlignment:
+                //                             CrossAxisAlignment.start,
+                //                         children: [],
+                //                       ),
+                //                     ),
+                //                   ],
+                //                 );
+                //               },
+                //             ),
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
+              ],
             ),
           ),
 
@@ -490,13 +486,6 @@ class _BodyState extends State<Body> {
                           ],
                         ),
                       ),
-                      // Container(
-                      //   padding: const EdgeInsets.only(left: 10, right: 200),
-                      //   child: Divider(
-                      //     thickness: 2,
-                      //     color: accentColor,
-                      //   ),
-                      // ),
                       Container(
                         padding: const EdgeInsets.only(left: 10),
                         margin: const EdgeInsets.symmetric(
